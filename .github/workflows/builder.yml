@@ -42,7 +42,7 @@ jobs:
 
       - name: Download NPoC
         run: |
-          git clone https://github.com/1c3z/ARL-NPoC docker/ARL-NPoC
+          git clone https://github.com/alex123-2star/ARL-NPoC docker/ARL-NPoC
 
       # Runs a single command using the runners shell
       - name: Login Registry
