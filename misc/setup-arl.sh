@@ -70,7 +70,7 @@ fi
 
 if [ ! -d "ARL-NPoC" ]; then
   echo "git clone ARL-NPoC proj"
-  git clone https://github.com/1c3z/ARL-NPoC
+  git clone https://github.com/alex123-2star/ARL-NPoC
 fi
 
 cd ARL-NPoC
