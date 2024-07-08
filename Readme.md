@@ -16,6 +16,25 @@
 
 资产灯塔，不仅仅是域名收集
 
+## 1.1 报错解决
+```
+ ⠸ Container arl_worker     Starting                                                                                             0.4s 
+Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: error during container init: error mounting "/opt/ARL/docker/arl_worker.log" to rootfs at "/code/arl_worker.log": mount /opt/ARL/docker/arl_worker.log:/code/arl_worker.log (via /proc/self/fd/6), flags: 0x5000: not a directory: unknown: Are you trying to mount a directory onto a file (or vice-versa)? Check if the specified host path exists and is the expected
+
+sudo rm -rf /opt/ARL/docker/arl_worker.log
+sudo touch /opt/ARL/docker/arl_worker.log
+```
+```
+ ✔ Container arl_rabbitmq   Running                                                                                              0.0s 
+ ✔ Container arl_mongodb    Running                                                                                              0.0s 
+ ✔ Container arl_scheduler  Running                                                                                              0.0s 
+ ✔ Container arl_worker     Running                                                                                              0.0s 
+ ⠹ Container arl_web        Starting                                                                                             0.2s 
+Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: error during container init: error mounting "/opt/ARL/docker/arl_web.log" to rootfs at "/code/arl_web.log": mount /opt/ARL/docker/arl_web.log:/code/arl_web.log (via /proc/self/fd/6), flags: 0x5000: not a directory: unknown: Are you trying to mount a directory onto a file (or vice-versa)? Check if the specified host path exists and is the expected type
+root@vmi1692799:/opt/ARL/docker# sudo rm -rf /opt/ARL/docker/arl_web.log
+root@vmi1692799:/opt/ARL/docker# sudo touch /opt/ARL/docker/arl_web.log
+```
+
 ## 2# 简介
 
 旨在快速侦察与目标关联的互联网资产，构建基础资产信息库。
